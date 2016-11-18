@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>KragleBusters FLL Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: lime;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item {
+    color: black;
+  }
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: white;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: black !important;
+  }
+  .navbar-nav li a:hover {
+      color: lightgray !important;
+  }
+  .navbar-nav li.active a {
+      color: lightgray !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: yellow;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+
+  .row img{
+    transform: rotate(90deg);
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">KragleBusters</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">ABOUT</a></li>
+        <li><a href="#tour">COMPETITION DATE</a></li>
+        <li><a href="#contact">DONATE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/images/Banner1.jpg" alt="New York" width="1200" height="400">
+        <div class="carousel-caption">
+          <h3>KragleBusters</h3>
+          <p>A First Lego League Team</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>ABOUT US</h3>
+  <p><em>We love LEGOS!!</em></p>
+  <p><center>Welcome Back Guests And Busters!</center>
+
+Welcome to the website for our First Lego League robotics team called the “Kragle Busters!” This is our second year competing in the First Lego League robotics competition for kids 9 - 14.
+In early fall, FLL releases a Challenge, which is based on a real-world scientific topic. This year’s topic is going to have something to do with “Waste Management.” The kids will be given a broad topic about Waste Management and will have to find a problem that they can solve (for example something like finding a way to encourage people to compost kitchen waste, or maybe building a better recycling bin). The variety of problems the thousands of different teams worldwide choose to solve each year is amazing.
+Each Challenge has three parts: the Robot Game, the Project, and the FLL Core Values. Teams of up to ten kids with at least two adult coaches participate in the Challenge by programming an autonomous robot to score points on a themed playing field (Robot Game), and developing a solution to a problem they have identified (Project), all guided by the First Lego League Core Values. Teams then attend an official tournament hosted by one of our FIRST LEGO League Partners.
+Follow along on our Blog (hopefully updated weekly!) as we progress through the season, meet our team members, or look at our calendar to see what we’re doing this week and into the future.
+The most important part of the First Lego League Core Values is to HAVE FUN!!
+While FLL is incredibly fun and educational activity, it is very expensive. Between buying a robot kit, the game board and pieces, putting together the project, building a product prototype, and promoting their team, the end cost is around $2500 per team. Our team has been partially sponsored both last year and this year by the Scrum Alliance for half of that amount. We are a small team, so covering the entire $1,250 ourselves is onerous for the families involved. Please donate if you can! </p>
+  <br>
+<h3 class="text-center">THE TEAM</h3>
+  <div class="row">
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Kenton Vizdos</strong></p><br>
+      <a href="#Kenton" data-toggle="collapse">
+        <img src="assets/images/team/Kenton.jpg" class="img-square" alt="Kenton Vizdos" width="200" height="200">
+      </a>
+      <div id="Kenton" class="collapse">
+        <p>Loves Programing and making YouTube videos!</p>
+        <p>I like programming the robot.</p>
+        <p>13</p>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Mariel Grebe</strong></p><br>
+      <a href="#Mariel" data-toggle="collapse">
+        <img src="assets/images/team/kento.png" class="img-square" alt="Mariel Grebe" width="200" height="200">
+      </a>
+      <div id="Mariel" class="collapse">
+        <p>Loves Gymnastics!</p>
+        <p>I like how we get to know eachother, and become better friends!</p>
+        <p>10</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Terra Vaughan</strong></p><br>
+      <a href="#Terra" data-toggle="collapse">
+        <img src="assets/images/team/Terra.jpg" class="img-square" alt="Terra Vaughan" width="200" height="200">
+      </a>
+      <div id="Terra" class="collapse">
+        <p>Loves hanging out with friends!</p>
+        <p>I love working on the robot and hanging out with the team!</p>
+        <p>13</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Kai Grebe</strong></p><br>
+      <a href="#Kai" data-toggle="collapse">
+        <img src="assets/images/team/Kai.jpg" class="img-square" alt="Kai Grebe" width="200" height="200">
+      </a>
+      <div id="Kai" class="collapse">
+        <p>Loves playing Soccer!</p>
+        <p>I love working on the robot!</p>
+        <p>13</p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- TJ -->
+    <div class="col-sm-4">
+      <p class="text-center"><strong>TJ Adams</strong></p><br>
+      <a href="#TJ" data-toggle="collapse">
+        <img src="assets/images/team/TJ.jpg" class="img-square" alt="TJ Adams" width="200" height="200">
+      </a>
+      <div id="TJ" class="collapse">
+        <p>Loves Gymnastics!</p>
+        <p>I love working on the script and hanging out with my friends during FLL!</p>
+        <p>13</p>
+      </div>
+    </div>
+
+    <!-- Lewis -->
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Lewis Tompkins</strong></p><br>
+      <a href="#Lewis" data-toggle="collapse">
+        <img src="assets/images/team/Lewis.jpg" class="img-square" alt="Lewis Tompkins" width="200" height="200">
+      </a>
+      <div id="Lewis" class="collapse">
+        <p>Loves Playing Soccer and Drawing!</p>
+        <p>I love playing with legos and robots!</p>
+        <p>11</p>
+      </div>
+    </div>
+
+    <!-- Ana -->
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Anastasia Fleischman</strong></p><br>
+      <a href="#Ana" data-toggle="collapse">
+        <img src="assets/images/team/Ana.jpg" class="img-square" alt="Ana Fleischman" width="200" height="200">
+      </a>
+      <div id="Ana" class="collapse">
+        <p>I love studying, exercising, and playing piano!</p>
+        <p>I like the new experiences that come with doing FLL, I like how I can learn how to program!</p>
+        <p>13</p>
+      </div>
+    </div>
+
+    <!-- Harrison -->
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Harrison Tompkins</strong></p><br>
+      <a href="#Harrison" data-toggle="collapse">
+        <img src="assets/images/team/Harrison.jpg" class="img-square" alt="Harrison Tompkins" width="200" height="200">
+      </a>
+      <div id="Harrison" class="collapse">
+        <p>I love water sports and computers!</p>
+        <p>I like solving robot missions!</p>
+        <p>14</p>
+      </div>
+    </div>
+
+    <!-- Cece -->
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Cecilia Oseguera</strong></p><br>
+      <a href="#Cece" data-toggle="collapse">
+        <img src="assets/images/team/Cece.jpg" class="img-square" alt="Cece Oseguera" width="200" height="200">
+      </a>
+      <div id="Cece" class="collapse">
+        <p>I love hanging out with friends!</p>
+        <p>I like spending time with friends</p>
+        <p>12</p>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">OUR COMPETITION DATE</h3>
+    <ul class="list-group">
+      <li class="list-group-item text-center">To Be Decided</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Donate</h3>
+
+  <div class="row">
+  <center>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="FVSK5A8YVLL8J" />
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+  </center>
+  </div>
+  <br>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>©  <a href="http://www.kentonvizdos.com" target="_blank">Kenton Vizdos</a></p>
+  <center><a href="http://www.scrumalliance.org" target="_blank"><img src="assets/images/sponsors/scrum.png" width="255"></a><a href="http://www.adamsinternationalschool.org/#welcome" target="_blank"><img src="assets/images/sponsors/ais.png" width="255"></a></center>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
